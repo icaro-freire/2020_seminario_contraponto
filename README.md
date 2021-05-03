@@ -30,14 +30,39 @@ Explanaremos, em nosso seminário, as nuances do Argumento de Draper e a respost
 
 ## Estruturação do Repositório
 
-- Parte teórica. Material teórico que serve para entendimento e expansão do tema. Contém:
-    + [01_o-argumento-de-draper.pdf](https://icaro-freire.github.io/2020_seminario_contraponto/01_o-argumento-de-draper.pdf): trecho do livro de Plantinga;
-    + [02_simbologia-probabilistica.pdf](https://icaro-freire.github.io/2020_seminario_contraponto/02_simbologia-probabilistica.pdf): pequeno texto que produzi para explicar superficialmente os conceitos de probabilidade envolvidos no argumento de Draper. 
-    + [03_monografia_unb.pdf](https://icaro-freire.github.io/2020_seminario_contraponto/03_monografia_unb.pdf): trata sobre a questão do mal levantada por Draper em outro contexto (sem a teoria da evolução), mas que pode servir para o entendimento geral da questão.
+Esse repositório possui a seguinte disposição:
 
-**Obs.**: Há um debate (sobre a existência de Deus) entre [William Lane Craig][CRAIG] e Paul Draper, intitulado [The Existence of God][DEB]. 
-Também serve como base explanatória para entendimento do pensamento de Draper.
-O debate é em Inglês, mas é possível ativar a tradução simultânea. 
+```{pre}
+.
+├── docs/
+├── img/
+├── material_teorico/
+│   ├── 01_o-argumento-de-draper.pdf
+│   ├── 02_simbologia-probabilistica.pdf
+│   └── 03_monografia_unb.pdf
+├── tex/
+└── README.md
+```
+
+Vamos falar, rapidamente, sobre cada um dos diretórios ou arquivos.
+
+- **docs/**. Pasta reservada para produzir uma visualização dos arquivos `.pdf`, que pode ser vista diretamente em algum navegador;
+- **img/**. Pasta para imagens do repositório;
+- **material_teórico/**. Pasta reservada aos materiais teóricos que servirão ao entendimento e expansão do tema. Nela, contém os seguinte arquivos:
+    + [01_o-argumento-de-draper.pdf][DRAP1]: trecho do livro de Plantinga;
+    + [02_simbologia-probabilistica.pdf][DRAP2]: pequeno texto que produzi para explicar superficialmente os conceitos de probabilidade envolvidos no argumento de Draper. 
+    + [03_monografia_unb.pdf][DRAP3]: trata sobre a questão do mal levantada por Draper em outro contexto (sem a teoria da evolução), mas que pode servir para o entendimento geral da questão.
+- **tex**. Arquivos, em LaTeX, que produziram os dois primeiros textos da pasta `material_teórico`;
+- **README.md**. Arquivo, _Markdown_, que produz esse "README".
+
+[DRAP1]: https://icaro-freire.github.io/2020_seminario_contraponto/01_o-argumento-de-draper.pdf
+[DRAP2]: https://icaro-freire.github.io/2020_seminario_contraponto/02_simbologia-probabilistica.pdf
+[DRAP3]: https://icaro-freire.github.io/2020_seminario_contraponto/03_monografia_unb.pdf
+
+**Obs.**: 
+1. Há um debate (sobre a existência de Deus) entre [William Lane Craig][CRAIG] e Paul Draper, intitulado [:movie_camera: The Existence of God][DEB]. Também serve como base explanatória para entendimento do pensamento de Draper. O debate é em Inglês, mas é possível ativar a tradução simultânea. 
+2. Saiba mais sobre arquivos escritos em _Markdown_ aqui: [::link:: https://blog.da2k.com.br/2015/02/08/aprenda-markdown/](https://blog.da2k.com.br/2015/02/08/aprenda-markdown/). Leva menos de 15 min.
+
 
 [CRAIG]: https://pt.wikipedia.org/wiki/William_Lane_Craig
 [DEB]: https://youtu.be/lK3jVNbG2-s
