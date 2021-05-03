@@ -1,10 +1,10 @@
 <p align="center">
  <img width="200px" src="img/logo_contraponto.svg" align="center" alt="Contraponto" />
- <h2 align="center"> I Seminário Contraponto de Ciência e Fé</h2>
- <p align="center">Grupo de Estudo Contraponto (Integração entre Ciência e Fé Cristã)</p>
+ <h2 align="center"> I Seminário Contraponto de Ciência e Fé </h2>
+ <h2 align="center"> :construction: (em construção) :construction: </h2>
 </p> 
 
-> Essse repositório serve para arquivar os materiais envolvidos no seminário "Críticas ao Argumento de Draper".
+> Essse repositório serve para arquivar os materiais envolvidos no seminário "Críticas ao Argumento de Draper", do Grupo de Estudo Contraponto (Integração entre Ciência e Fé Cristã).
 
 ## Contexto do Seminário
 
