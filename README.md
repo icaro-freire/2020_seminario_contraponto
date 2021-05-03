@@ -31,9 +31,9 @@ Explanaremos, em nosso seminário, as nuances do Argumento de Draper e a respost
 ## Estruturação do Repositório
 
 - Parte teórica. Material teórico que serve para entendimento e expansão do tema. Contém:
-    + 01_o-argumento-de-draper.pdf: trecho do livro de Plantinga;
-    + 02_simbologia-probabilistica.pdf: pequeno texto que produzi para explicar superficialmente os conceitos de probabilidade envolvidos no argumento de Draper. 
-    + 03_monografia_unb: trata sobre a questão do mal levantada por Draper em outro contexto (sem a teoria da evolução), mas que pode servir para o entendimento geral da questão.
+    + [01_o-argumento-de-draper.pdf](https://icaro-freire.github.io/2020_seminario_contraponto/01_o-argumento-de-draper.pdf): trecho do livro de Plantinga;
+    + [02_simbologia-probabilistica.pdf](https://icaro-freire.github.io/2020_seminario_contraponto/02_simbologia-probabilistica.pdf): pequeno texto que produzi para explicar superficialmente os conceitos de probabilidade envolvidos no argumento de Draper. 
+    + [03_monografia_unb.pdf](https://icaro-freire.github.io/2020_seminario_contraponto/03_monografia_unb.pdf): trata sobre a questão do mal levantada por Draper em outro contexto (sem a teoria da evolução), mas que pode servir para o entendimento geral da questão.
 
 **Obs.**: Há um debate (sobre a existência de Deus) entre [William Lane Craig][CRAIG] e Paul Draper, intitulado [The Existence of God][DEB]. 
 Também serve como base explanatória para entendimento do pensamento de Draper.
