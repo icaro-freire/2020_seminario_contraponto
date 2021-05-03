@@ -1,0 +1,304 @@
+\documentclass[11pt, a5paper]{exam}
+
+%==============================================================================
+% Pacotes
+%------------------------------------------------------------------------------
+\usepackage{euler}
+\usepackage{fontspec}
+ \setmainfont
+ [
+  Path           = fonts/,
+  Extension      = .ttf,
+  UprightFont    = *-Regular,
+  BoldFont       = *-Bold,
+  ItalicFont     = *-Italic
+ ]{Alegreya}
+\usepackage{polyglossia}
+  \setdefaultlanguage[variant = brazilian]{portuguese}
+\usepackage
+ [
+	 top    = 2.54cm,
+  bottom = 2.54cm,
+		left   = 1.91cm,
+		right  = 1.91cm
+	]{geometry}
+\usepackage{coffee4}
+\usepackage{graphicx}
+	\graphicspath{{./figs/}}
+\usepackage{float}
+\usepackage[labelfont = bf, font = small]{caption}
+\usepackage{fancybox}
+\usepackage{booktabs}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{amsmath, amsthm, amsfonts, amssymb, amscd}
+\usepackage{mathtools}
+\usepackage{systeme}
+\usepackage{esint}  
+\usepackage{cancel}
+\usepackage{esvect}
+\usepackage{array}
+ \setcounter{MaxMatrixCols}{20}
+\usepackage{xcolor}
+\usepackage{hyperref} 																											
+ \hypersetup
+ {
+  colorlinks  = true,
+  linkcolor   = blue,
+  citecolor   = blue,
+  filecolor   = blue,
+  urlcolor    = blue,
+  pdfproducer = {LaTeX},
+  pdfcreator  = {XeLaTeX},
+  pdfauthor   = {Ícaro Vidal Freire},
+  pdfsubject  = {Resposta para questão de Kedna}, 
+  pdfkeywords = {Dúvida, Vetorial, Integral Dupla, Matemática, Física,
+		               Volume, coordenada polar, coordenadas cilíndricas}
+ }
+\usepackage{lipsum}
+%==============================================================================
+
+%==============================================================================
+% Operadores Matemáticos
+%------------------------------------------------------------------------------
+\DeclareMathOperator{\sen}{sen}
+\DeclareMathOperator{\tg}{tg}
+\DeclareMathOperator{\cossec}{cossec}
+\DeclareMathOperator{\cotg}{cotg}
+\DeclareMathOperator{\arcsen}{arcsen}
+\DeclareMathOperator{\arctg}{arctg}
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\Ln}{Ln}
+\DeclareMathOperator{\Arg}{Arg}
+\DeclareMathOperator{\cis}{cis}
+\DeclareMathOperator{\vol}{vol}
+%==============================================================================
+
+%==============================================================================
+% Novos Comandos 
+%------------------------------------------------------------------------------
+\newcommand{\dd}{\,\mathrm{d}}
+\newcommand{\vazio}{\varnothing}
+\newcommand{\Abs}[1]{\vert{#1}\vert}
+\newcommand{\versor}[1]{\cdot\vec{\textbf{#1}}}
+\newcommand{\Cis}[1]{\cos{#1} + i\,\sen{#1}}
+\newcommand{\intc}{\varointctrclockwise}
+\newtheorem{teorema}{Teorema}
+\newtheorem{obs}{Observação}
+%==============================================================================
+
+%==============================================================================
+% Classe Exam
+%------------------------------------------------------------------------------
+\pointpoints{\,ponto}{\,pontos} %---> muda o nome dos pontos: singular e plural,
+%                                     respectivamente
+\pointformat{}
+\qformat{\ovalbox{\bfseries Questão \thequestion}\hfill} %---> o hfill `quebra` 
+%                                                              a linha
+\renewcommand{\solutiontitle}{\noindent{\bfseries \itshape Resposta:}\enspace}%
+\SolutionEmphasis{\small}
+\shadedsolutions %-----------------------------------> Mostra sombra na solução
+\definecolor{SolutionColor}{rgb}{.95,.95,.95}
+\printanswers %--------------------------------------------> Mostra as Soluções
+\pagestyle{headandfoot}
+\runningfootrule
+\firstpagefooter{}{\thepage}{}
+\runningfooter{}{\thepage}{}
+%==============================================================================
+
+%==============================================================================
+% Título
+%------------------------------------------------------------------------------
+\title{\textbf{O Argumento de Draper}}
+\author{Amargosa-BA}
+\date{2021.1}
+%==============================================================================
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% INÍCIO DO DOCUMENTO
+%------------------------------------------------------------------------------
+\begin{document}
+%
+\maketitle
+%
+\cofeAm{1}{.7}{94}{7cm}{2.5cm} %---------------> configuração da mancha de café
+%
+\begin{abstract}
+Parte do livro \textit{Ciência, Religião e Naturalismo: onde está o conflito?},
+que servirá como principal referência para preparação da apresentação 
+``Críticas ao Argumento de Draper'', inserida no \textit{I Seminário Contraponto
+de Ciência e Fé}.
+Separei o texto em secções e fiz algumas modificações na estrutura do mesmo, sem
+alterar o conteúdo.
+\end{abstract}
+%
+
+\section{Introdução}
+
+Defendi até agora, contra Dawkins e Dennett, a tese de que a evolução e o teísmo
+são compatíveis. 
+No sentido que dou aos termos, significa que não há verdades tão evidentes a
+ponto de tornar a conjunção da evolução com o teísmo incoerente no sentido 
+lógico amplo. 
+Poderia se afirmar, por outro lado, que, mesmo que as coisas sejam assim, a 
+veracidade da evolução nos dá alguns motivos para rejeitar o teísmo: talvez a 
+evolução seja um \textit{evidencia} contra o teísmo.
+É exatamente essa a tese de Paul Draper
+\footnote
+{
+  Paul Draper, 
+  ``Evolution and the problem of evil'', 
+  in: Louis Pojman; Michael Rea, orgs.,
+  \textit{Philosophy of religion: an anthology},
+  5.ed. (Belmont, California: Thomson Wadsworth, 2008).
+}: 
+
+\begin{quote}
+  ``Vou demonstrar que certos fatos conhecidos dão mais apoio à hipótese do 
+  naturalismo que à hipótese do teísmo porque temos consideravelmente mais 
+  razões para esperar que eles sustentem a pressuposição de que o naturalismo 
+  seja verdadeiro em lugar da pressuposição de que o teísmo seja verdadeiro.''
+\end{quote}
+
+Quais seriam esses ``fatos conhecidos''? 
+Um deles, segundo Draper, é a evolução
+\footnote
+{
+  Draper, op. cit., p. 208. No artigo, ele também cita, como se fossem fatos 
+  conhecidos, o modo pelo qual a dor e o prazer se distribuem em nosso mundo e o 
+  modo pelo qual a dor e o prazer se vinculam à sobrevivência e ao êxito 
+  reprodutivo. 
+  Tratarei aqui apenas da tese mencionada no corpo do texto; seção IV, abordarei
+  da tese de Philip Kitcher de que o desperdício, a predação e a dor envolvidos 
+  na evolução são evidencias contra o teísmo.
+}: 
+
+\begin{quote}
+  ``Minha posição é que a evolução é uma evidência que favorece mais o naturalismo 
+  que o teísmo.
+  Há, em outras palavras, um bom argumento \textit{evidencial} favorável ao 
+  naturalismo e contra o teísmo.'' 
+\end{quote}
+
+A hipótese é que a evolução é mais provável -- pelo menos duas vezes mais 
+provável, diz Draper -- no naturalismo do que no teísmo.
+
+\section{O argumento}
+
+Seu argumento se desenrola como segue. 
+
+Seja $ E $ a \textit{evolução} (ou seja, a proposição de que todas as formas de 
+vida terrestres existentes na época atual surgiram por meio da evolução),  
+$ T $ o \textit{teísmo} e $ N $ o \textit{naturalismo}. 
+Draper argumenta que:
+
+\begin{equation}\label{hip1}
+  P(E | N) \text{ é muito maior que } P(E|T).
+\end{equation}
+
+Disso ele infere que, se nado o mais for igual quanto às evidências, o 
+naturalismo é mais provável que o teísmo.
+Considerando que o naturalismo é incompatível com o teísmo, segue-se que teísmo 
+é improvável.
+
+\section{Resposta ao argumento de Draper}
+
+\subsection{Considerações Iniciais}
+
+Suponhamos, no entanto, que, como pensa a maioria dos teístas que refletiram 
+sobre o assunto, o teísmo seja não contingente: necessariamente verdadeiro ou 
+necessariamente falso. 
+Nesse caso, \eqref{hip1} não implica que o naturalismo seja mais provável que o 
+teísmo; ao contrário, implica obviamente que o teísmo seja verdadeiro. 
+
+Se o teísmo é não contingente e falso, segue-se que é necessariamente falso; a 
+probabilidade de uma proposição contingente dada uma falsidade necessária é $ 1 $;
+logo, $ P(E|T) $ é $ 1 $. 
+Mas se, como alega Draper, $ P(E|N) $ é maior que $ P(E|T) $ segue-se que 
+$ P(E|T) $ é menor que $ 1 $, logo, $ T $ não é necessariamente falso. 
+Se $ T $ não é necessariamente falso, é necessariamente verdadeiro em razão de 
+sua não contingencia. 
+
+Então, se o teísmo é não contingente e \eqref{hip1} é verdadeira, o teísmo é não 
+apenas verdadeiro como necessariamente verdadeiro. 
+
+Draper, como é obvio, pressupõe que o teísmo seja contingente; logo, seu 
+argumento não virá ao caso se o teísmo for não contingente. 
+Mas deixemos essa limitação de lado e examinem os detalhes de seu interessante 
+argumento.
+
+\subsection{Análise do argumento}
+
+O que diz o argumento? 
+Seja $ S $ a proposição de que ``alguns seres vivos relativamente complexos não 
+descendem de organismos unicelulares relativamente simples, mas foram criados 
+independentemente por uma pessoa sobrenatural''; nesse caso, como assinala 
+Draper, 
+
+\begin{equation}\label{hip2}
+ \begin{split}
+  P(E|N) \text{ será muito maior que } P(E/T) \text{ se, e somente se, }\\
+  P(\sim\! S | N) \times P(E|\sim\! S \& N) \text{ for muito maior que } \\
+  P(\sim\! S | T) \times P(E | \sim\! S \& T).
+ \end{split}
+\end{equation}
+
+Naturalmente, ele propõe, para demonstrar que $ P(E|N) $ é muito maior que 
+$ P(E|T) $, que $ P(\sim\! S | N) \times P(E | \sim\! S \& N) $ é muito maior que 
+$ P(\sim\! S | T) \times P(E | \sim\! S \& T) $.
+Para demonstrar isso, ele pretende mostrar que: 
+
+\begin{parts}
+	 \part $ P(\sim\! S | N) $ é muito maior que $ P(\sim\! S |T) $ e que
+  \part $ P(E | \sim\! S \& N) $ é \textit{pelo menos tão grande quanto} 
+   $ P(E | \sim\! S \& T) $.
+\end{parts}
+
+Com respeito a (a), Draper argumenta que $ P(\sim\! S | N) $ é pelo menos
+\textit{duas vezes maior} que $ P(\sim\!\!\! S | T) $. 
+Se, como ele também afirma, {\small $ P(E |\! \sim\! S\& N) $ } é ao menos tão grande quanto 
+$ P(E|\sim\!\! S \& T) $, a consequência é que $ P(E | N) $ é pelo menos duas vezes 
+maior que $ P(E | T) $; isso é suficiente, segundo parece pensar Draper, para 
+que se possa afirmar que $ P(E | N) $ é muito maior que $ P(E | T) $. 
+Se seu argumento estiver correto, consequentemente $ P(E | N) $ é pelo menos 
+duas vezes maior que $ P(E|T) $.
+
+Suponhamos que isso seja verdade: o que de fato demonstra? 
+Como Draper diz, \textit{se tudo o mais for igual quanto às evidências}, o 
+teísmo é improvável. 
+Mas é claro que essa igualdade de evidências é uma ficção. 
+Acaso não há no contexto desse argumento uma série de outras probabilidades que 
+favorecem o teísmo pelo menos no mesmo grau?
+
+Por exemplo: seja $ V $ a proposição ``há vida na Terra''. 
+Considerando as enormes dificuldades de perceber como a vida pode ter surgido 
+unicamente em virtude das leis da Física, $ P(V | N ) $ é baixa. 
+Mas $ P(V | T) $ não é baixa: ao contrário, é muito provável que o Deus do 
+teísmo quisesse que houvesse vida, e várias formas de vida. 
+Logo, $ P(V | T) $ é muito mais alta -- imagino que por várias ordens de 
+magnitude -- que $ P(V | N) $. 
+
+Do mesmo modo, seja $ I $ a proposição ``há seres inteligentes''; seja $ M $ a 
+proposição ``há seres dotados de sentido moral''; seja $ C $ a proposição ``há 
+criaturas que prestam culto a Deus''; $ P(I|T) $, $ P(M|T) $ e $ P(C|T) $ são, 
+cada uma delas, muito mais altas que $ P(I|N) $, $ P(M|N) $ e $ P(C|N) $. 
+O Deus do teísmo desejaria muito que houvesse criaturas semelhantes a ele por 
+serem racionais e inteligentes; também desejaria, sem dúvida, que houvesse 
+criaturas dotadas de sentido moral, capazes de diferenciar o certo do errado; e 
+muito provavelmente desejaria que houvesse criaturas capazes de experimentar sua 
+presença e motivadas a prestar culto por sua experiência da grandeza e bondade 
+de Deus. 
+
+\section{Conclusões}
+
+Há muitos outros ``fatos conhecidos'' que conferem mais plausibilidade ao teísmo 
+que ao naturalismo. 
+Nesse caso, portanto, as evidencias mais favoráveis ao naturalismo que ao 
+teísmo, citadas por Draper, são mais que contrabalançadas pelas evidências mais 
+favoráveis ao teísmo que ao naturalismo.
+
+%
+\end{document}
+%------------------------------------------------------------------------------
+% FIM DO DOCUMENTO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
